@@ -1,0 +1,101 @@
+#page-register-teacher {
+  width: 100vw;
+  height: 100vh;
+}
+#page-register-teacher #register-teacher {
+  width: 80%;
+  margin: 5rem auto 0 auto;
+  background-color: var(--color-box-base);
+  border-radius: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+#page-register-teacher .success {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(95, 36, 166, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  color: var(--color-title-in-primary);
+}
+#register-teacher main {
+  padding: 5rem 3.5rem;
+}
+#register-teacher h2 {
+  color: var(--color-text-title);
+  font-size: 2rem;
+  margin: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#register-teacher h2 button {
+  cursor: pointer;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  transition: color 0.3s;
+}
+#register-teacher h2 button:hover {
+  color: var(--color-primary-lighter);
+}
+#register-teacher .input-block + h2 {
+  margin-top: 5rem;
+}
+#register-teacher .line {
+  height: 0.008rem;
+  background-color: var(--color-line-in-white);
+}
+#register-teacher .time {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-gap: 1.5rem;
+}
+#register-teacher footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem 2rem;
+  background-color: var(--color-box-footer);
+  border-top: 1px solid var(--color-line-in-white);
+}
+#register-teacher footer div {
+  display: flex;
+  align-items: center;
+  color: var(--color-text-complement);
+  font: 400 1.2rem Poppins;
+}
+#register-teacher footer div p {
+  margin-left: 2rem;
+}
+#register-teacher footer button {
+  width: 20rem;
+  padding: 1.5rem 2rem;
+  border: 0;
+  outline: 0;
+  background-color: var(--color-secundary);
+  border-radius: 0.4rem;
+  color: var(--color-button-text);
+  cursor: pointer;
+  transition: 0.2s;
+}
+#register-teacher footer button:hover {
+  background-color: var(--color-secundary-dark);
+}
+@media (min-width: 700px) {
+  #page-register-teacher {
+    max-width: 100%;
+  }
+}
