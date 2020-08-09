@@ -48,18 +48,3 @@ const FavoritedProvider: React.FC = ({ children }) => {
 };
 
 export default FavoritedProvider;
-
-/*
-const [todos, setTodos] = useState([
-    { id: 1, title: "seu pai", done: false },
-    { id: 2, title: "seu tio", done: false },
-    { id: 3, title: "seu vô", done: false },
-  ]);
-
-  const saveTodo = (todo: Todo) => {
-    const newTodo = {
-      id: todos.length + 1,
-      done: false,
-      title: todo.title,
-    };
-    setTodos([...todos, newTodo]); */

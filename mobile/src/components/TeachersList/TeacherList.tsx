@@ -26,35 +26,7 @@ interface ITeacherListProps {
 }
 
 const TeachersList: React.FC<ITeacherListProps> = ({ teacher, favorited }) => {
-  // const [isFavorited, setIsFavoritade] = useState(favorited);
-
   const { handleFavoritedToggle, isFavorited } = useContext(TodoContext);
-
-  // async function handleFavoritedToggle() {
-  //   saveTodo({
-  //     done: false,
-  //     id: Math.random(),
-  //     title: "Nova tarefa",
-  //   });
-  //   const favoriteds = await AsyncStorage.getItem("favorites");
-
-  //   let favArray = [];
-
-  //   if (favoriteds) {
-  //     favArray = JSON.parse(favoriteds);
-  //   }
-  //   if (isFavorited) {
-  //     const favoritedIndex = favArray.findIndex(
-  //       (teacherItem: Teacher) => teacherItem.id === teacher.id
-  //     );
-  //     favArray.splice(favoritedIndex, 1);
-  //     setIsFavoritade(false);
-  //   } else {
-  //     favArray.push(teacher);
-  //     setIsFavoritade(true);
-  //   }
-  //   await AsyncStorage.setItem("favorites", JSON.stringify(favArray));
-  // }
 
   function handleMessageToWpp() {
     Linking.openURL(`whatsapp://send?phone=${teacher.whatsapp}`);
