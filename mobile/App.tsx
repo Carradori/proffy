@@ -8,6 +8,9 @@ import {
   Archivo_700Bold,
 } from "@expo-google-fonts/archivo";
 import { Poppins_400Regular } from "@expo-google-fonts/poppins";
+import FavoritedProvider, {
+  TodoContext,
+} from "./src/contexts/FavoritedContext";
 import Routes from "./src/routes";
 
 export default function App() {
@@ -22,7 +25,9 @@ export default function App() {
   } else {
     return (
       <>
-        <Routes />
+        <FavoritedProvider>
+          <Routes />
+        </FavoritedProvider>
         <StatusBar backgroundColor="transparent" translucent style="light" />
       </>
     );

@@ -8,6 +8,7 @@ import styles from "./styles";
 
 interface IProps {
   title: string;
+  children?: ReactNode;
 }
 
 const Header: React.FC<IProps> = ({ title, children }) => {
@@ -32,4 +33,4 @@ const Header: React.FC<IProps> = ({ title, children }) => {
   );
 };
 
-export default Header;
+export default React.memo(Header);
