@@ -59,4 +59,14 @@ export default class CreateUserController {
       });
     }
   }
+  async list(request: Request, response: Response) {
+    try {
+      const { id } = request.params;
+      const proffy = await this.createUserUseCase.list(Number(id));
+      return response.status(200).json(proffy);
+    } catch (error) {
+      console.log(error);
+      return response.status(401).json({ message: "Ocorreu um erro" });
+    }
+  }
 }

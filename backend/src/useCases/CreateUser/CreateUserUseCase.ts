@@ -12,4 +12,7 @@ export default class CreateUserUseCase {
   async index(filters: IFilters) {
     return await this.usersRepository.index(filters);
   }
+  async list(id: number) {
+    return await this.usersRepository.list(id);
+  }
 }

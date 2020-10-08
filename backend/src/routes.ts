@@ -11,6 +11,9 @@ const routes = Router();
 routes.post("/users", upload.single("avatar"), (req, res) => {
   return createUserController.handle(req, res);
 });
+routes.get("/user/:id", (req, res) => {
+  return createUserController.list(req, res);
+});
 routes.get("/users", (req, res) => {
   return createUserController.index(req, res);
 });

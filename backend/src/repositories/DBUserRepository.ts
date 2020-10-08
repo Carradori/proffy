@@ -4,6 +4,7 @@ import { IUser } from "../entities/User";
 import { db } from "../database/connection";
 import { convertHourToMinute } from "../utils/convertHourToMinute";
 import { IUserResponseFiltered } from "./IUserResponseFiltered";
+import { IUserList } from "./subjects/IUserList";
 
 export class DBUserRepository implements IUsersRepository {
   async save(user: IUser): Promise<void> {
@@ -66,5 +67,13 @@ export class DBUserRepository implements IUsersRepository {
       .select(["classes.*", "users.*"]);
 
     return classes;
+  }
+  async list(id: number): Promise<IUserList[]> {
+    const user = await db("users")
+      .where({
+        id,
+      })
+      .select("*");
+    return user;
   }
 }
